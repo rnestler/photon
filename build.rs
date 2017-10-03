@@ -59,6 +59,13 @@ fn main() {
         out,
     );
 
+    cp("build/target/services/platform-6-m/libservices.a", out);
+    cp("build/target/newlib_nano/platform-6-m/libnewlib_nano.a", out);
+    cp("build/target/communication/platform-6-m-prod-6/libcommunication.a", out);
+    cp("build/target/system/platform-6-m/libsystem.a", out);
+    cp("build/target/communication-dynalib/platform-6-m/libcommunication-dynalib.a", out);
+    cp("build/target/hal/platform-6-m/libhal.a", out);
+
     // library and linker script search paths
     println!("cargo:rustc-link-search={}", out.display());
     println!(
